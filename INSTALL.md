@@ -1,6 +1,22 @@
 # Everlearn Install Guide
 
-## 1. Download And Unzip
+## 1. Install Or Download
+
+Fast install/update from GitHub:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile ecommerce
+```
+
+This downloads the latest package, runs setup, and verifies the install.
+
+To pin a specific release or branch:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --ref main --profile ecommerce
+```
+
+Manual ZIP install:
 
 If you received `everlearn-workshop.zip`:
 
@@ -16,7 +32,7 @@ If you cloned the project from GitHub:
 cd ~/Projects/everlearn
 ```
 
-## 2. Run Setup
+## 2. Run Setup For Manual ZIP Installs
 
 For the ecommerce workshop:
 

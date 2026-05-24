@@ -8,6 +8,14 @@ It gives agents a simple, repeatable way to save durable learnings, decisions, r
 
 Use this path during the AI for Ecommerce workshop:
 
+Fast install/update:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile ecommerce
+```
+
+ZIP install:
+
 ```bash
 cd ~/Downloads
 unzip everlearn-workshop.zip
@@ -42,6 +50,8 @@ Open `~/Everlearn Vault` in Obsidian to see the note.
 - `~/.agents/skills/everlearn`
 
 The extra `~/.agents/skills` install keeps the skill visible in shared skill runtimes that both Claude Code and Codex can read.
+
+The curl installer stores the downloaded source at `~/.everlearn/source` and can be rerun later to update the local skill and command files.
 
 ## Core Commands
 
