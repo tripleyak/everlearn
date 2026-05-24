@@ -5,7 +5,7 @@
 Fast install/update from GitHub:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile ecommerce
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop --profile ecommerce
 ```
 
 This downloads the latest package, runs setup, and verifies the install.
@@ -13,7 +13,7 @@ This downloads the latest package, runs setup, and verifies the install.
 To pin a specific release or branch:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --ref main --profile ecommerce
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop --profile ecommerce
 ```
 
 Manual ZIP install:

@@ -4,11 +4,11 @@ set -euo pipefail
 usage() {
   cat <<'USAGE'
 Usage:
-  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- [setup options]
+  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop [setup options]
 
 Examples:
-  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile ecommerce
-  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile general --vault "$HOME/Documents/My Vault"
+  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop --profile ecommerce
+  curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop --profile general --vault "$HOME/Documents/My Vault"
 
 Installer options:
   --ref REF            Git ref to install from. Default: main

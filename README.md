@@ -11,7 +11,7 @@ Use this path during the AI for Ecommerce workshop:
 Fast install/update:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/main/scripts/install.sh | bash -s -- --profile ecommerce
+curl -fsSL https://raw.githubusercontent.com/tripleyak/everlearn/v2026-05-27-workshop/scripts/install.sh | bash -s -- --ref v2026-05-27-workshop --profile ecommerce
 ```
 
 ZIP install:
