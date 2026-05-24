@@ -4,6 +4,8 @@ set -euo pipefail
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 repo_root="$(cd "$script_dir/.." && pwd)"
 skill_source="$repo_root/skills/everlearn"
+claude_command_source="$repo_root/commands/everlearn.md"
+codex_prompt_source="$repo_root/prompts/everlearn.md"
 
 # shellcheck source=../skills/everlearn/scripts/lib.sh
 . "$skill_source/scripts/lib.sh"
@@ -96,10 +98,18 @@ copy_skill() {
 
 if [ "$install_claude" -eq 1 ]; then
   copy_skill "$HOME/.claude/skills"
+  if [ -f "$claude_command_source" ]; then
+    mkdir -p "$HOME/.claude/commands"
+    cp "$claude_command_source" "$HOME/.claude/commands/everlearn.md"
+  fi
 fi
 
 if [ "$install_codex" -eq 1 ]; then
   copy_skill "$HOME/.codex/skills"
+  if [ -f "$codex_prompt_source" ]; then
+    mkdir -p "$HOME/.codex/prompts"
+    cp "$codex_prompt_source" "$HOME/.codex/prompts/everlearn.md"
+  fi
 fi
 
 if [ "$install_agents" -eq 1 ]; then
@@ -155,4 +165,10 @@ printf "Everlearn setup complete.\n"
 printf "Vault: %s\n" "$vault"
 printf "Profile: %s\n" "$profile"
 printf "Command: %s\n" "$everlearn_home/bin/everlearn"
+if [ "$install_claude" -eq 1 ] && [ -f "$HOME/.claude/commands/everlearn.md" ]; then
+  printf "Claude Code slash command: /everlearn\n"
+fi
+if [ "$install_codex" -eq 1 ] && [ -f "$HOME/.codex/prompts/everlearn.md" ]; then
+  printf "Codex prompt shortcut: everlearn\n"
+fi
 printf "\nOpen the vault in Obsidian with: Open folder as vault -> %s\n" "$vault"

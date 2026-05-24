@@ -73,6 +73,14 @@ or:
 Save this as an Everlearn decision note in my vault.
 ```
 
+In Claude Code, you can also use:
+
+```text
+/everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
+```
+
+In Codex, use the natural-language prompt above. If your Codex install exposes prompt shortcuts, Everlearn also installs an `everlearn` prompt shortcut.
+
 ## Optional: SignalSweep Inside Everlearn
 
 If SignalSweep is installed, Everlearn can run it and save that run into the Everlearn vault without changing SignalSweep's normal default save directory.

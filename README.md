@@ -34,7 +34,9 @@ Open `~/Everlearn Vault` in Obsidian to see the note.
 - `~/.everlearn/config`
 - `~/.everlearn/bin/everlearn`
 - `~/.claude/skills/everlearn`
+- `~/.claude/commands/everlearn.md`
 - `~/.codex/skills/everlearn`
+- `~/.codex/prompts/everlearn.md`
 - `~/.agents/skills/everlearn`
 
 The extra `~/.agents/skills` install keeps the skill visible in shared skill runtimes that both Claude Code and Codex can read.
@@ -49,6 +51,18 @@ The extra `~/.agents/skills` install keeps the skill visible in shared skill run
 ~/.everlearn/bin/everlearn signalsweep --topic "standing desk customer complaints" -- --quick
 ~/.everlearn/bin/everlearn review
 ~/.everlearn/bin/everlearn verify
+```
+
+In Claude Code, restart after setup and use:
+
+```text
+/everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
+```
+
+In Codex, restart after setup and use plain English:
+
+```text
+Use Everlearn to capture the reusable learning from this session.
 ```
 
 ## Profiles

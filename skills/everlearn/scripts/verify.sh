@@ -42,7 +42,9 @@ check_file "command wrapper" "$everlearn_home/bin/everlearn"
 
 printf "\nAgent skill installs:\n"
 check_file "Claude Code skill" "$HOME/.claude/skills/everlearn/SKILL.md"
+check_file "Claude Code /everlearn command" "$HOME/.claude/commands/everlearn.md"
 check_file "Codex skill" "$HOME/.codex/skills/everlearn/SKILL.md"
+check_file "Codex Everlearn prompt" "$HOME/.codex/prompts/everlearn.md"
 check_file "Shared agents skill" "$HOME/.agents/skills/everlearn/SKILL.md"
 
 if [ "$failures" -gt 0 ]; then
@@ -51,4 +53,3 @@ if [ "$failures" -gt 0 ]; then
 fi
 
 printf "\nEverlearn verification passed.\n"
-

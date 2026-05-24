@@ -22,6 +22,8 @@ If this skill was installed globally, scripts are usually available at:
 - `~/.claude/skills/everlearn/scripts/`
 - `~/.agents/skills/everlearn/scripts/`
 
+Claude Code installs may also expose `/everlearn` from `~/.claude/commands/everlearn.md`. Codex installs may expose an Everlearn prompt shortcut from `~/.codex/prompts/everlearn.md`, depending on the Codex version.
+
 ## Capture Rule
 
 Write to the vault only when the user explicitly asks to capture/save/remember something, or when the user has opted into automatic Everlearn capture. At normal closeout, if durable learning was created, offer a short proposed capture instead of silently writing.
