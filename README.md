@@ -46,6 +46,7 @@ The extra `~/.agents/skills` install keeps the skill visible in shared skill run
 ~/.everlearn/bin/everlearn capture --type decision --title "Use Shopify bundle test" "Decision and rationale."
 ~/.everlearn/bin/everlearn capture --type research --title "Competitor review notes" "Summary and source links."
 ~/.everlearn/bin/everlearn capture --type workflow --title "Weekly ad review flow" "Steps that should be reused."
+~/.everlearn/bin/everlearn signalsweep --topic "standing desk customer complaints" -- --quick
 ~/.everlearn/bin/everlearn review
 ~/.everlearn/bin/everlearn verify
 ```
@@ -77,6 +78,24 @@ Good captures are short, reusable, and specific:
 - What source or evidence supports it?
 - Where should the agent look first next time?
 
+## SignalSweep Integration
+
+Everlearn can run SignalSweep as a nested research step without changing SignalSweep's default save directory.
+
+```bash
+~/.everlearn/bin/everlearn signalsweep \
+  --topic "customer complaints about cold plunge accessories" \
+  -- --quick
+```
+
+That command:
+
+- scopes `SIGNALSWEEP_MEMORY_DIR` to this one run only
+- saves raw SignalSweep artifacts to `~/Everlearn Vault/30 Research/SignalSweep`
+- creates an Everlearn `research` note that links to the saved artifact
+
+SignalSweep's normal default can remain your main Obsidian KB or any other directory you already use.
+
 ## Repository Layout
 
 ```text
@@ -97,4 +116,3 @@ everlearn/
 ## Safety
 
 Everlearn is meant for local knowledge capture, not secret storage. Do not capture API keys, cookies, passwords, payment data, customer private data, or confidential material unless you have a clear reason and a safe vault policy.
-

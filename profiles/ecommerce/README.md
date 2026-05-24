@@ -30,3 +30,10 @@ Workshop test capture:
   "A shopper wanted a lower-priced starter bundle before buying the full kit."
 ```
 
+Nested SignalSweep research:
+
+```bash
+~/.everlearn/bin/everlearn signalsweep \
+  --topic "Amazon review complaints for starter bundles" \
+  -- --quick
+```

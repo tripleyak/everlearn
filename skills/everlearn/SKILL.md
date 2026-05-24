@@ -68,6 +68,26 @@ Verify setup:
 ~/.everlearn/bin/everlearn verify
 ```
 
+## Nested SignalSweep Workflow
+
+When the user is using Everlearn and asks to research a topic with SignalSweep, or asks to save SignalSweep research into Everlearn, run SignalSweep through Everlearn instead of changing SignalSweep's global defaults:
+
+```bash
+~/.everlearn/bin/everlearn signalsweep --topic "best starter bundles for cold plunge accessories"
+```
+
+This sets `SIGNALSWEEP_MEMORY_DIR` only for that one run, saves SignalSweep artifacts under `30 Research/SignalSweep`, and creates an Everlearn `research` note linking to the artifact.
+
+To pass SignalSweep flags, put them after `--`:
+
+```bash
+~/.everlearn/bin/everlearn signalsweep --topic "standing desk customer complaints" -- --quick
+```
+
+If you have prepared SignalSweep targeting or a query plan as the host agent, pass those flags the same way, for example `-- --plan /tmp/signalsweep-plan.json --subreddits AmazonSeller`.
+
+Use this nested workflow when SignalSweep is part of an Everlearn capture/research flow. Do not change the user's normal SignalSweep default save directory unless they explicitly ask.
+
 ## Note Quality
 
 A good Everlearn note is short, source-aware, and reusable. Include:
@@ -81,4 +101,3 @@ A good Everlearn note is short, source-aware, and reusable. Include:
 ## Profiles
 
 Use `references/profiles.md` for profile-specific examples. The profile changes examples and folder suggestions; the capture workflow stays the same.
-

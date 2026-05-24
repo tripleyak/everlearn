@@ -122,6 +122,10 @@ case "$command" in
     shift
     exec "$script_dir/capture.sh" "$@"
     ;;
+  signalsweep|capture-signalsweep)
+    shift
+    exec "$script_dir/capture-signalsweep.sh" "$@"
+    ;;
   review|weekly-review)
     shift
     exec "$script_dir/weekly-review.sh" "$@"
@@ -134,6 +138,7 @@ case "$command" in
     cat <<'HELP'
 Everlearn commands:
   everlearn capture --title "Title" --type learning "Body text"
+  everlearn signalsweep --topic "Topic to research" -- --mock
   everlearn review
   everlearn verify
 HELP
@@ -151,4 +156,3 @@ printf "Vault: %s\n" "$vault"
 printf "Profile: %s\n" "$profile"
 printf "Command: %s\n" "$everlearn_home/bin/everlearn"
 printf "\nOpen the vault in Obsidian with: Open folder as vault -> %s\n" "$vault"
-

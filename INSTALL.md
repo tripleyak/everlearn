@@ -73,6 +73,28 @@ or:
 Save this as an Everlearn decision note in my vault.
 ```
 
+## Optional: SignalSweep Inside Everlearn
+
+If SignalSweep is installed, Everlearn can run it and save that run into the Everlearn vault without changing SignalSweep's normal default save directory.
+
+```bash
+~/.everlearn/bin/everlearn signalsweep \
+  --topic "customer complaints about cold plunge accessories" \
+  -- --quick
+```
+
+The raw SignalSweep artifact goes to:
+
+```text
+~/Everlearn Vault/30 Research/SignalSweep
+```
+
+The distilled Everlearn note goes to:
+
+```text
+~/Everlearn Vault/30 Research
+```
+
 ## Troubleshooting
 
 ### `everlearn: command not found`
@@ -108,4 +130,3 @@ Run setup again:
 ```
 
 This updates `~/.everlearn/config` and leaves your existing notes in place.
-

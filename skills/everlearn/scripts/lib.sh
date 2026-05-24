@@ -50,6 +50,7 @@ ensure_vault_folders() {
     "$EVERLEARN_VAULT/10 Learnings" \
     "$EVERLEARN_VAULT/20 Decisions" \
     "$EVERLEARN_VAULT/30 Research/Customer Signals" \
+    "$EVERLEARN_VAULT/30 Research/SignalSweep" \
     "$EVERLEARN_VAULT/40 Workflows/Prompts" \
     "$EVERLEARN_VAULT/50 Sources" \
     "$EVERLEARN_VAULT/60 Reviews" \
@@ -77,4 +78,3 @@ write_tags() {
     IFS="$old_ifs"
   fi
 }
-
