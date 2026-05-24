@@ -5,6 +5,7 @@ script_dir="$(cd "$(dirname "$0")" && pwd)"
 repo_root="$(cd "$script_dir/.." && pwd)"
 skill_source="$repo_root/skills/everlearn"
 claude_command_source="$repo_root/commands/everlearn.md"
+codex_command_source="$repo_root/skills/everlearn/commands/everlearn.md"
 codex_prompt_source="$repo_root/prompts/everlearn.md"
 
 # shellcheck source=../skills/everlearn/scripts/lib.sh
@@ -106,6 +107,10 @@ fi
 
 if [ "$install_codex" -eq 1 ]; then
   copy_skill "$HOME/.codex/skills"
+  if [ -f "$codex_command_source" ]; then
+    mkdir -p "$HOME/.codex/commands"
+    cp "$codex_command_source" "$HOME/.codex/commands/everlearn.md"
+  fi
   if [ -f "$codex_prompt_source" ]; then
     mkdir -p "$HOME/.codex/prompts"
     cp "$codex_prompt_source" "$HOME/.codex/prompts/everlearn.md"
@@ -170,5 +175,8 @@ if [ "$install_claude" -eq 1 ] && [ -f "$HOME/.claude/commands/everlearn.md" ]; 
 fi
 if [ "$install_codex" -eq 1 ] && [ -f "$HOME/.codex/prompts/everlearn.md" ]; then
   printf "Codex prompt shortcut: everlearn\n"
+fi
+if [ "$install_codex" -eq 1 ] && [ -f "$HOME/.codex/skills/everlearn/commands/everlearn.md" ]; then
+  printf "Codex slash command: /everlearn\n"
 fi
 printf "\nOpen the vault in Obsidian with: Open folder as vault -> %s\n" "$vault"

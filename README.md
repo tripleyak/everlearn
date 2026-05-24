@@ -36,6 +36,8 @@ Open `~/Everlearn Vault` in Obsidian to see the note.
 - `~/.claude/skills/everlearn`
 - `~/.claude/commands/everlearn.md`
 - `~/.codex/skills/everlearn`
+- `~/.codex/skills/everlearn/commands/everlearn.md`
+- `~/.codex/commands/everlearn.md`
 - `~/.codex/prompts/everlearn.md`
 - `~/.agents/skills/everlearn`
 
@@ -59,7 +61,13 @@ In Claude Code, restart after setup and use:
 /everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
 ```
 
-In Codex, restart after setup and use plain English:
+In Codex, restart after setup and use:
+
+```text
+/everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
+```
+
+Plain English also works:
 
 ```text
 Use Everlearn to capture the reusable learning from this session.

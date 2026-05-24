@@ -79,7 +79,13 @@ In Claude Code, you can also use:
 /everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
 ```
 
-In Codex, use the natural-language prompt above. If your Codex install exposes prompt shortcuts, Everlearn also installs an `everlearn` prompt shortcut.
+In Codex, you can use:
+
+```text
+/everlearn signal Customers keep asking whether the starter bundle includes replacement filters.
+```
+
+If your Codex install does not expose skill slash commands, use the natural-language prompt above. Everlearn also installs an `everlearn` prompt shortcut for Codex versions that expose prompt shortcuts.
 
 ## Optional: SignalSweep Inside Everlearn
 

@@ -22,7 +22,7 @@ If this skill was installed globally, scripts are usually available at:
 - `~/.claude/skills/everlearn/scripts/`
 - `~/.agents/skills/everlearn/scripts/`
 
-Claude Code installs may also expose `/everlearn` from `~/.claude/commands/everlearn.md`. Codex installs may expose an Everlearn prompt shortcut from `~/.codex/prompts/everlearn.md`, depending on the Codex version.
+Claude Code installs may also expose `/everlearn` from `~/.claude/commands/everlearn.md`. Codex installs may expose `/everlearn` from `~/.codex/skills/everlearn/commands/everlearn.md` or `~/.codex/commands/everlearn.md`, plus an Everlearn prompt shortcut from `~/.codex/prompts/everlearn.md`, depending on the Codex version.
 
 ## Capture Rule
 
